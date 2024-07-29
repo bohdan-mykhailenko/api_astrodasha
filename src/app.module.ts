@@ -1,9 +1,11 @@
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { Module } from "@nestjs/common";
+
+import { AppController } from "./app.controller";
+import { AppService } from "./app.service";
+import { AstroPositionModule } from "./astro-position/astro-position.module";
 
 @Module({
-  imports: [],
+  imports: [AstroPositionModule],
   controllers: [AppController],
   providers: [AppService],
 })
